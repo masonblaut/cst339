@@ -22,7 +22,7 @@ public class RegisterUserController {
 	public String display( Model model) {
 		
 		// Display login form view
-		model.addAttribute("title", "Register Form");
+		model.addAttribute("message", "Register Form");
 		model.addAttribute("registerModel", new RegisterModel());
 	
 		return "register";
