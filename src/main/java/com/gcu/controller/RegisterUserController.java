@@ -29,16 +29,15 @@ public class RegisterUserController {
 	}
 	
 	@PostMapping("/doRegister")
-	public String doLogin(@Valid RegisterModel registerModel, BindingResult bindingresult, Model model) {
+	public String doRegister(@Valid RegisterModel registerModel, BindingResult bindingresult, Model model) {
 		
 		if(bindingresult.hasErrors()) {
 			model.addAttribute("title", "Register Form");
 			return "register";
 		}
-		model.addAttribute("title", "Register");
-		model.addAttribute("orders", "You have successfully registered");
 		
-		return "register";
+		
+		return "index";
 	}
 	
 }

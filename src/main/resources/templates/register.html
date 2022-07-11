@@ -63,6 +63,10 @@
 					<td align="center "colspan="2"><input type="submit" value="Sign Up"/></td>
 				</tr>
 			</table>
+			<div th:if="${#fields.errors('*')}">List of Errors</div>
+			<div th:each="err : ${#fields.errors('*')}">
+				<span style="color:red" th:text="${err}" class="fieldError"></span>
+			</div>
 		</form>
 	
 	</div>
@@ -70,3 +74,4 @@
 
   </body>
 </html>
+
