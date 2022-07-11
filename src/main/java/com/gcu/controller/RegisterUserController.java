@@ -22,23 +22,23 @@ public class RegisterUserController {
 	public String display( Model model) {
 		
 		// Display login form view
-		model.addAttribute("message", "Register Form");
+		model.addAttribute("message1", "Welcome to Preach Blog");
+		model.addAttribute("message2", "Register");
 		model.addAttribute("registerModel", new RegisterModel());
 	
 		return "register";
 	}
 	
 	@PostMapping("/doRegister")
-	public String doLogin(@Valid RegisterModel registerModel, BindingResult bindingresult, Model model) {
+	public String doRegister(@Valid RegisterModel registerModel, BindingResult bindingresult, Model model) {
 		
 		if(bindingresult.hasErrors()) {
 			model.addAttribute("title", "Register Form");
 			return "register";
 		}
-		model.addAttribute("title", "Register");
-		model.addAttribute("orders", "You have successfully registered");
 		
-		return "register";
+		
+		return "index";
 	}
 	
 }

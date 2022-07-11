@@ -5,7 +5,6 @@ import javax.validation.constraints.Size;
 
 public class RegisterModel {
 	
-	
 
 	@NotNull(message="User name field cannot be empty!")
 	@Size(min=1, max=20, message="Your first name must be between 1 and 32 characters long!")
